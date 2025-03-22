@@ -150,10 +150,10 @@ This dataset is under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) 
 # Citation:
 If you found MMFakeBench useful in your research or applications, please kindly cite using the following BibTeX:
 ```
-@article{liu2024mmfakebench,
+@inproceedings{liu2024mmfakebench,
   title={MMFakeBench: A Mixed-Source Multimodal Misinformation Detection Benchmark for LVLMs},
   author={Liu, Xuannan and Li, Zekun and Li, Peipei and Huang, Huaibo and Xia, Shuhan and Cui, Xing and Huang, Linzhi and Deng, Weihong and He, Zhaofeng},
-  journal={ICLR},
+  booktitle={ICLR},
   year={2025}
 }
 ```
