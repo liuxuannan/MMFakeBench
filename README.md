@@ -1,7 +1,7 @@
 <h1 align="center">MMFakeBench: A Mixed-Source Multimodal Misinformation Detection Benchmark for LVLMs</h1>
 <h3 align="center">ICLR 2025 </h3>
 <p align='center' style="text-align:center;font-size:1em;">
-Liu Xuannan, Li Zekun, Li Peipei, Huang Huaibo, Xia Shuhan, Cui Xing, Huang Linzhi, Deng Weihong, He Zhaofeng
+Xuannan Liu, Zekun Li, Peipei Li, Huaibo Huang, Shuhan Xia, Xing Cui, Linzhi Huang, Weihong Deng, Zhaofeng He
 </p>
 
 
