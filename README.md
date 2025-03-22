@@ -11,7 +11,7 @@ This is the official code repository of the MMFakeBench dataset.
 
 `2025/01` 🎊🎊🎊 MMFakeBench is accepted by ICLR 2025!
 
-`2024/05` 🔥🔥🔥 FigStep has been integrated into [garak](https://github.com/leondz/garak/pull/587), thanks!
+`2024/05` 🔥🔥🔥 We release the code and dataset of MMFakeBench!
 
 
 ## Data repository
