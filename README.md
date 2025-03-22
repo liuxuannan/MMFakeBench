@@ -5,6 +5,15 @@
 
 This is the official code repository of the MMFakeBench dataset. 
 
+## News
+
+`2025/03` 🎙🎙🎙 MMFakeBench dataset is updated
+
+`2025/01` 🎊🎊🎊 MMFakeBench is accepted by ICLR 2025!
+
+`2024/05` 🔥🔥🔥 FigStep has been integrated into [garak](https://github.com/leondz/garak/pull/587), thanks!
+
+
 ## Data repository
 
 You should strictly follow the data usage guidelines by filling in [Data Protocol](https://docs.google.com/forms/d/e/1FAIpQLScKkQXn0uGN5Uu8oqFf4tU4NDU4scB-nMmTIPLoSEMxAeNwNA/viewform?edit_requested=true) and the download link will be sent to you once the form is accepted. 
@@ -137,8 +146,8 @@ If you found MMFakeBench useful in your research or applications, please kindly 
 ```
 @article{liu2024mmfakebench,
   title={MMFakeBench: A Mixed-Source Multimodal Misinformation Detection Benchmark for LVLMs},
-  author={Liu, Xuannan and Li, Zekun and Li, Peipei and Xia, Shuhan and Cui, Xing and Huang, Linzhi and Huang, Huaibo and Deng, Weihong and He, Zhaofeng},
-  journal={arXiv preprint arXiv:2406.08772},
-  year={2024}
+  author={Liu, Xuannan and Li, Zekun and Li, Peipei and Huang, Huaibo and Xia, Shuhan and Cui, Xing and Huang, Linzhi and Deng, Weihong and He, Zhaofeng},
+  journal={ICLR},
+  year={2025}
 }
 ```
