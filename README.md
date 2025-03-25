@@ -38,7 +38,7 @@ Each iamge-text sample in the dataset is provided with annotations. For example,
   }
 ```
 
-Where `text` refers to the manipulated text caption, `image_path` is the relative path to the manipulated image, `text_source` and `image_source` denote the sources of the text and image data respectively, `gt_answers` represents the binary label indicating the type of misinformation, and `fake_cls` specifies the multiclass label identifying the source of the misinformation.
+Where `text` refers to the manipulated text caption, `image_path` is the relative path to the manipulated image, `text_source` and `image_source` denote the sources of the text and image data respectively, `gt_answers` represents the binary label indicating the type of misinformation and `fake_cls` specifies the multiclass label identifying the source of the misinformation.
 
 ## Data Structure
 This dataset is structured around mixed-source multimodal misinformation detection.
