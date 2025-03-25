@@ -13,7 +13,7 @@ This is the official code repository of the MMFakeBench dataset.
 
 ## News
 
-`2025/03` 🎙🎙🎙 MMFakeBench dataset is updated
+`2025/03` 🎙🎙🎙 MMFakeBench dataset is updated!
 
 `2025/01` 🎊🎊🎊 MMFakeBench is accepted by ICLR 2025!
 
@@ -28,15 +28,17 @@ You should strictly follow the data usage guidelines by filling in [Data Protoco
 Each iamge-text sample in the dataset is provided with annotations. For example, the annotation of a multimodal misinformation sample with mixed-source type may look like this in the MMFakeBench_val.json/MMFakeBench_test.json file:
 
 ```
-{
-    "image_path": "/fake/fever_AI_val_100/fever_dalle_val_1.jpg",
+  {
     "text": "Wi-Fi is a trademark of Microsoft.",
-    "fake_cls": "textual_veracity_distortion",
-    "gt_answers": ["Fake"]
-    }
+    "image_path": "/fake/fever_AI_val_100/fever_dalle_val_1.png",
+    "text_source": "Fever",
+    "image_source": "AI-generated Image",
+    "gt_answers": "Fake",
+    "fake_cls": "textual_veracity_distortion"
+  }
 ```
 
-Where `image_path` is the relative path of the manipulated image, `text` is the manipulated text caption, `fake_cls` indicates the multiclass label of misinformation source, and `gt_answers` is the binary label of misinformation type.
+Where `text` refers to the manipulated text caption, `image_path` is the relative path to the manipulated image, `text_source` and `image_source` denote the sources of the text and image data respectively, `gt_answers` represents the binary label indicating the type of misinformation, and `fake_cls` specifies the multiclass label identifying the source of the misinformation.
 
 ## Data Structure
 This dataset is structured around mixed-source multimodal misinformation detection.
@@ -48,68 +50,68 @@ This dataset is structured around mixed-source multimodal misinformation detecti
 │   │   ├── MMFakeBench_val.json
 │   ├── real
 │   │   ├── bbc_val_50
-│   │   │   ├── BBC_val_0000_002.jpg
-│   │   │   ├── BBC_val_0067_219.jpg
+│   │   │   ├── BBC_val_0.png
+│   │   │   ├── BBC_val_1.png
 │   │   │   └── ...
 │   │   ├── guardian_val_50
-│   │   │   ├── guardian_val_0800_000.jpg
-│   │   │   ├── guardian_val_0809_691.jpg
+│   │   │   ├── guardian_val_0.png
+│   │   │   ├── guardian_val_1.png
 │   │   │   └── ...
 │   │   ├── usa_today_val_50
-│   │   │   ├── usa_today_val_0002_156.jpg
-│   │   │   ├── usa_today_val_0333_272.jpg
+│   │   │   ├── usa_today_val_0.png
+│   │   │   ├── usa_today_val_1.png
 │   │   │   └── ...
 │   │   ├── wash_val_50
-│   │   │   ├── wash_val_0010_771.jpg
-│   │   │   ├── wash_val_0057_599.jpg
+│   │   │   ├── wash_val_0.png
+│   │   │   ├── wash_val_1.png
 │   │   │   └── ...
 │   │   ├── fakeddit_val_50
-│   │   │   ├── 1lcojw.jpg
-│   │   │   ├── 1ncm16.jpg
+│   │   │   ├── fakeddit_val_0.png
+│   │   │   ├── fakeddit_val_1.png
 │   │   │   └── ...
 │   │   ├── coco_val_50
-│   │   │   ├── coco_val_000000066771.jpg
-│   │   │   ├── coco_val_000000078748.jpg
+│   │   │   ├── coco_val_0.png
+│   │   │   ├── coco_val_1.png
 │   │   │   └── ...
 │   ├── fake
 # textual veracity distortion
 │   │   ├── fever_AI_val_100
-│   │   │   ├── fever_dalle_val_1.jpg
-│   │   │   ├── fever_val_SD_1.jpg
-│   │   │   ├── fever_val_AI_1.jpg
+│   │   │   ├── fever_dalle_val_1.png
+│   │   │   ├── fever_val_SD_1.png
+│   │   │   ├── fever_val_AI_1.png
 │   │   │   └── ...
 │   │   ├── politicat_match_val_50
-│   │   │   ├── politicat_match_val_0.jpg
-│   │   │   ├── politicat_match_val_1.jpg
+│   │   │   ├── politicat_match_val_0.png
+│   │   │   ├── politicat_match_val_1.png
 │   │   │   └── ...
 │   │   ├── gossipcop_match_val_25
-│   │   │   ├── gossipcop_match_val_0.jpg
-│   │   │   ├── pgossipcop_match_val_1.jpg
+│   │   │   ├── gossipcop_match_val_0.png
+│   │   │   ├── pgossipcop_match_val_1.png
 │   │   │   └── ...
 │   │   ├── gossipcop_midjourney_val_25
-│   │   │   ├── gossipcop_val_1.jpg
-│   │   │   ├── gossipcop_val_2.jpg
+│   │   │   ├── gossipcop_val_1.png
+│   │   │   ├── gossipcop_val_2.png
 │   │   │   └── ...
 │   │   ├── chatgpt_match_val_50
-│   │   │   ├── chatgpt_match_val_0.jpg
-│   │   │   ├── chatgpt_match_val_1.jpg
+│   │   │   ├── chatgpt_match_val_0.png
+│   │   │   ├── chatgpt_match_val_1.png
 │   │   │   └── ...
 │   │   ├── llm_gossip_md_generation_val_10
-│   │   │   ├── llm_gossip_val_1.jpg
-│   │   │   ├── llm_gossip_val_2.jpg
+│   │   │   ├── llm_gossip_val_1.png
+│   │   │   ├── llm_gossip_val_2.png
 │   │   │   └── ...
 │   │   ├── llm_science_md_generation_val_10
-│   │   │   ├── llm_science_val_1.jpg
-│   │   │   ├── llm_science_val_2.jpg
+│   │   │   ├── llm_science_val_1.png
+│   │   │   ├── llm_science_val_2.png
 │   │   │   └── ...
 │   │   ├── llm_rewrite_val_30
 │   │   │   ├── chatgpt_rewrite_md_val_1.png
-│   │   │   ├── chatgpt_rewrite_dalle_val_3.jpg
+│   │   │   ├── chatgpt_rewrite_dalle_val_3.png
 │   │   │   └── ...
 # visual veracity distortion
 │   │   ├── Fakeddit_photo_edit_val_50
-│   │   │   ├── Fakeddit_photo_edit_val_0.jpeg
-│   │   │   ├── Fakeddit_photo_edit_val_1.jpeg
+│   │   │   ├── Fakeddit_photo_edit_val_0.png
+│   │   │   ├── Fakeddit_photo_edit_val_1.png
 │   │   │   └── ...
 │   │   ├── antifact_image_generation_val_50
 │   │   │   ├── coco_antifact_val_1.png
@@ -117,28 +119,28 @@ This dataset is structured around mixed-source multimodal misinformation detecti
 │   │   │   └── ...
 # cross-modal consistency distortion
 │   │   ├── Newsclipings_person_val_50
-│   │   │   ├── Newsclipings_person_val_0.jpeg
-│   │   │   ├── Newsclipings_person_val_1.jpeg
+│   │   │   ├── Newsclipings_person_val_0.png
+│   │   │   ├── Newsclipings_person_val_1.png
 │   │   │   └── ...
 │   │   ├── Newsclipings_scene_val_50
-│   │   │   ├── Newsclipings_scene_val_0.jpeg
-│   │   │   ├── Newsclipings_scene_val_1.jpeg
+│   │   │   ├── Newsclipings_scene_val_0.png
+│   │   │   ├── Newsclipings_scene_val_1.png
 │   │   │   └── ...
 │   │   ├── Newsclipings_semantic_val_50
-│   │   │   ├── Newsclipings_semantic_val_0.jpeg
-│   │   │   ├── Newsclipings_semantic_val_1.jpeg
+│   │   │   ├── Newsclipings_semantic_val_0.png
+│   │   │   ├── Newsclipings_semantic_val_1.png
 │   │   │   └── ...
 │   │   ├── DGM4_text_edit_senti_val_50
-│   │   │   ├── DGM4_text_edit_senti_val_0.jpg
-│   │   │   ├── DGM4_text_edit_senti_val_1.jpg
+│   │   │   ├── DGM4_text_edit_senti_val_0.png
+│   │   │   ├── DGM4_text_edit_senti_val_1.png
 │   │   │   └── ...
 │   │   ├── coco_text_edit_val_50
-│   │   │   ├── coco_text_edit_val_2431_3_img_0.jpg
-│   │   │   ├── coco_text_edit_val_8762_3_img_0.jpg
+│   │   │   ├── coco_text_edit_val_0.png
+│   │   │   ├── coco_text_edit_val_1.png
 │   │   │   └── ...
 │   │   ├── coco_text_edit_val_50
-│   │   │   ├── coco_image_edit_val_1296_4_img_1.jpg
-│   │   │   ├── coco_image_edit_val_5992_4_img_1.jpg
+│   │   │   ├── coco_image_edit_val_0.png
+│   │   │   ├── coco_image_edit_val_1.png
 │   │   │   └── ...
 ```
 
