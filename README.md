@@ -22,7 +22,7 @@ This is the official code repository of the MMFakeBench dataset.
 
 ## Data repository
 
-You should strictly follow the data usage guidelines by filling in [Data Protocol](https://docs.google.com/forms/d/e/1FAIpQLScKkQXn0uGN5Uu8oqFf4tU4NDU4scB-nMmTIPLoSEMxAeNwNA/viewform?edit_requested=true) and the download link will be sent to you once the form is accepted. 
+You should strictly follow the data usage guidelines by filling in [Data Usage Protocol on Huggingface](https://huggingface.co/datasets/liuxuannan/MMFakeBench).
 
 ### Annotations
 Each iamge-text sample in the dataset is provided with annotations. For example, the annotation of a multimodal misinformation sample with mixed-source type may look like this in the MMFakeBench_val.json/MMFakeBench_test.json file:
